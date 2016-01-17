@@ -42,6 +42,11 @@
     </scm>
     <repositories>
         <repository>
+            <id>project.local</id>
+            <name>project</name>
+            <url>file:///${project.basedir}/../repo</url>
+        </repository>
+        <repository>
             <id>nexus-snapshots</id>
             <url>http://nexus:8081/content/repositories/snapshots</url>
             <releases>
