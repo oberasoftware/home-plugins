@@ -55,7 +55,7 @@ public class NestExtension implements DeviceExtension {
     }
 
     @Override
-    public void activate(Optional<PluginItem> pluginItem) {
+    public void activate() {
         nestConnector.activate();
     }
 }

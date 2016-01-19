@@ -4,7 +4,6 @@ import com.google.common.collect.Maps;
 import com.oberasoftware.home.api.commands.handlers.CommandHandler;
 import com.oberasoftware.home.api.extensions.DeviceExtension;
 import com.oberasoftware.home.api.model.Device;
-import com.oberasoftware.home.api.model.storage.PluginItem;
 import com.oberasoftware.home.zwave.exceptions.ZWaveConfigurationException;
 import com.oberasoftware.home.zwave.exceptions.ZWaveException;
 import org.slf4j.Logger;
@@ -13,7 +12,6 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 
 import static org.slf4j.LoggerFactory.getLogger;
 
@@ -47,7 +45,7 @@ public class ZWaveSpringExtension implements DeviceExtension {
     }
 
     @Override
-    public void activate(Optional<PluginItem> pluginItem) {
+    public void activate() {
         try {
             serialZWaveConnector.connect();
             zWaveController.initializeNetwork();
